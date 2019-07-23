@@ -1,8 +1,9 @@
 import React from "react";
 import Person from "./Person/Person";
 
-const persons = props =>
-  props.persons.map((person, index) => (
+const persons = props => {
+  console.log("[Person.js] rendering...");
+  return props.persons.map((person, index) => (
     <Person
       nombre={person.name}
       edad={person.age}
@@ -11,4 +12,5 @@ const persons = props =>
       change={event => props.change(event, index)}
     />
   ));
+};
 export default persons;
