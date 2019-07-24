@@ -5,9 +5,13 @@ const Cockpit = props => {
   useEffect(() => {
     console.log("[Cockpit.js] useEffect");
     //fake http request
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       alert("Saved data to cloud!");
     }, 2000);
+    return () => {
+      clearTimeout(timer);
+      console.log("[Cockpit.js] cleanUp work");
+    };
   }, []);
 
   const classes = [];
