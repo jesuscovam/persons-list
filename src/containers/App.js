@@ -26,6 +26,15 @@ class App extends React.Component {
     console.log("[App.js] componentDidMount");
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("[App.js] shouldComponentUpdate");
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log("[App.js] componentDidUpdate");
+  }
+
   showPersonsHandler = () => {
     const show = !this.state.show;
     this.setState({ show });
