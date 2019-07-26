@@ -85,7 +85,7 @@ class App extends React.Component {
           <Cockpit
             title={this.props.appTitle}
             show={this.state.show}
-            persons={this.state.persons}
+            personsLength={this.state.persons.length}
             showHandler={this.showPersonsHandler}
           />
         ) : null}
